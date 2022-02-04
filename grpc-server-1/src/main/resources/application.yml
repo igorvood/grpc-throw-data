@@ -12,4 +12,7 @@ grpc:
       negotiationType: plaintext
       max-inbound-message-size: 1GB
       keep-alive-time: 30s
-
+#
+#logging:
+#  level:
+#    root: debug

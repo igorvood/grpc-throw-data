@@ -1,0 +1,18 @@
+syntax = "proto3";
+option java_multiple_files = true;
+option java_package = "ru.vood.grpc.app.proto2";
+option java_outer_classname = "HelloWorldProto";
+
+import "google/protobuf/empty.proto";
+//import "proto/protobuf/empty.proto";
+// The greeting service definition.
+service Simple2 {
+    // Sends a greeting
+    rpc getHello (HelloRequest2) returns (google.protobuf.Empty);
+}
+
+// The request message containing the user's name.
+message HelloRequest2 {
+    string name = 1;
+}
+
