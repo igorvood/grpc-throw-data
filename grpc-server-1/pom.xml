@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>ru.vood</groupId>
-    <artifactId>grpc</artifactId>
+    <artifactId>grpc-server-1</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>grpc</name>
     <description>grpc</description>
@@ -49,6 +49,26 @@
             <artifactId>grpc-server-spring-boot-starter</artifactId>
             <version>2.6.2.RELEASE</version>
         </dependency>
+        <dependency>
+            <groupId>net.devh</groupId>
+            <artifactId>grpc-client-spring-boot-starter</artifactId>
+            <version>2.6.2.RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>io.grpc</groupId>
+            <artifactId>grpc-protobuf</artifactId>
+            <version>1.34.0</version>
+        </dependency>
+        <dependency>
+            <groupId>io.grpc</groupId>
+            <artifactId>grpc-stub</artifactId>
+            <version>1.34.0</version>
+        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>io.grpc</groupId>-->
+<!--            <artifactId>grpc-services</artifactId>-->
+<!--            <version>1.34.0</version>-->
+<!--        </dependency>-->
     </dependencies>
 
     <build>
