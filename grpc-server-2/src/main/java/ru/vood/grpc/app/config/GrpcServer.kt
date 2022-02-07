@@ -18,7 +18,7 @@ class GrpcServer(/*val client: Simple2BlockingStub*/) : Simple2Grpc.Simple2ImplB
 
     override fun getHello(request: HelloRequest2, responseObserver: StreamObserver<Empty>) {
         LOGGER.info("sayHello ${request.name}")
-        sendError(responseObserver, error("in error ${request.name}"), Status.INTERNAL)
+        this.sendError(responseObserver = responseObserver, e = error("in error ${request.name}"), st = Status.INTERNAL)
 //        sendOk(responseObserver, Empty.getDefaultInstance())
     }
 

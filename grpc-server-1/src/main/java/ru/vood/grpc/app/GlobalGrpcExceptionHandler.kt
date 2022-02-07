@@ -20,6 +20,9 @@ class GlobalGrpcExceptionHandler : ServerInterceptor {
             override fun onHalfClose() {
                 try {
                     super.onHalfClose()
+                } catch (e: StatusRuntimeException) {
+                    LOGGER.error("{} - {}", e, e.message)
+                    call.close(e.status, Metadata())
                 } catch (e: Exception) {
                     LOGGER.error("{} - {}", e, e.message)
                     call.close(Status.INTERNAL.withCause(e).withDescription(e.message), Metadata())
