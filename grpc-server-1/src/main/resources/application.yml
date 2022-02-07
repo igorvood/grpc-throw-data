@@ -6,7 +6,7 @@ grpc:
     keep-alive-timeout: 30
   client:
     srv2:
-      address: 'static://localhost:50052'
+      address: 'static://localhost:50061'
       enableKeepAlive: true
       keepAliveWithoutCalls: true
       negotiationType: plaintext
