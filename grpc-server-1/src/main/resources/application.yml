@@ -12,7 +12,9 @@ grpc:
       negotiationType: plaintext
       max-inbound-message-size: 1GB
       keep-alive-time: 30s
-#
+
+server:
+  port: 8090
 #logging:
 #  level:
 #    root: debug

@@ -4,6 +4,8 @@ grpc:
     reflection-service-enabled: true
     max-inbound-message-size: 1GB
     keep-alive-timeout: 30
+server:
+  port: 8080
 #  client:
 #    srv2:
 #      address: 'static://localhost:50052'
