@@ -1,6 +1,7 @@
 package ru.vood.grpc.app.config
 
 import com.google.protobuf.Empty
+import io.grpc.Status
 import io.grpc.stub.StreamObserver
 import net.devh.boot.grpc.server.service.GrpcService
 import org.slf4j.LoggerFactory
@@ -17,7 +18,8 @@ class GrpcServer(/*val client: Simple2BlockingStub*/) : Simple2Grpc.Simple2ImplB
 
     override fun getHello(request: HelloRequest2, responseObserver: StreamObserver<Empty>) {
         LOGGER.info("sayHello ${request.name}")
-        sendOk(responseObserver, Empty.getDefaultInstance())
+        sendError(responseObserver, error("in error ${request.name}"), Status.INTERNAL)
+//        sendOk(responseObserver, Empty.getDefaultInstance())
     }
 
 /*
