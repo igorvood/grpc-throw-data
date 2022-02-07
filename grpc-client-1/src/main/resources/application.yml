@@ -1,17 +1,17 @@
 grpc:
-  server:
-    port: 50051
-    reflection-service-enabled: true
-    max-inbound-message-size: 1GB
-    keep-alive-timeout: 30
+#  server:
+#    port: 50051
+#    reflection-service-enabled: true
+#    max-inbound-message-size: 1GB
+#    keep-alive-timeout: 30
   client:
-    srv2:
-      address: 'static://localhost:50051'
-      enableKeepAlive: true
-      keepAliveWithoutCalls: true
-      negotiationType: plaintext
-      max-inbound-message-size: 1GB
-      keep-alive-time: 30s
+#    srv2:
+#      address: 'static://localhost:50051'
+#      enableKeepAlive: true
+#      keepAliveWithoutCalls: true
+#      negotiationType: plaintext
+#      max-inbound-message-size: 1GB
+#      keep-alive-time: 30s
     srv1:
       address: 'static://localhost:50051'
       enableKeepAlive: true
@@ -22,7 +22,7 @@ grpc:
 
 
 server:
-  port: 8090
+  port: 8095
 #logging:
 #  level:
 #    root: debug
