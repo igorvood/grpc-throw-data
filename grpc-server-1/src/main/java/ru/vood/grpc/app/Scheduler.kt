@@ -6,15 +6,15 @@ import ru.vood.grpc.app.proto2.HelloRequest2
 import ru.vood.grpc.app.proto2.Simple2Grpc
 import java.util.*
 
-@Service
-class Scheduler(val sad: Simple2Grpc.Simple2BlockingStub) {
+//@Service
+class Scheduler(val client: Simple2Grpc.Simple2BlockingStub) {
 
 
     @Scheduled(fixedDelay = 1000)
     fun sad() {
         val random = Random()
         val randomWithNextInt: Int = random.nextInt()
-        sad.getHello(HelloRequest2.newBuilder()
+        client.getHello(HelloRequest2.newBuilder()
             .setName("Igor $randomWithNextInt")
             .build())
     }

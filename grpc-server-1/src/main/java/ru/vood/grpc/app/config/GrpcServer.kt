@@ -8,6 +8,7 @@ import ru.vood.grpc.app.GlobalGrpcExceptionHandler
 import ru.vood.grpc.app.proto.HelloRequest
 import ru.vood.grpc.app.proto.SimpleGrpc.SimpleImplBase
 import ru.vood.grpc.app.proto2.HelloRequest2
+import ru.vood.grpc.app.proto2.Simple2Grpc
 import ru.vood.grpc.app.proto2.Simple2Grpc.Simple2BlockingStub
 
 @GrpcService
